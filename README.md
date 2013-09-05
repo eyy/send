@@ -3,7 +3,7 @@ jquery-send
 
 Send today `<form>` as JSON!
 
-`bower install send`
+`bower i send`
 
 ```js
 $('form').serializeObject()   // get form data as an object
