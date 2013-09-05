@@ -1,7 +1,7 @@
 jquery-send
 =======
 
-send forms as json!
+Send today `<form>` as JSON!
 
 `bower install send`
 
