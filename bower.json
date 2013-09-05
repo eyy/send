@@ -1,0 +1,17 @@
+{
+  "name": "send",
+  "version": "0.0.2",
+  "repo": "eyy/send",
+  "description": "Send forms as json!",
+  "keywords": [
+    "form",
+    "ajax",
+    "json",
+    "rest"
+  ],
+  "main": "send.js",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "*"
+  }
+}
