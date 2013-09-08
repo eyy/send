@@ -1,14 +1,6 @@
 /*
     jquery-send
-        send forms as json!
-
-    $('form').serializeObject()   // get form data as an object
-    $('form').send(callback)      // send form as ajax
-
-    example:
-        $('form').send(function(res) {
-            $('h3.message').text(res.message);
-        });
+	https://github.com/eyy/send
  */
 
 (function($) {
@@ -30,9 +22,11 @@
     };
 
     $.fn.send = function(success, error) {
-        this.on('submit', function(e) {
+        return this.on('submit', function(e) {
             e.preventDefault();
             var t = $(this);
+
+            t.find('[type=submit]').prop('disabled', true);
 
             $.ajax({
                 type: t.attr('method') || 'post',
@@ -42,7 +36,9 @@
                 processData: false,
                 contentType: 'application/json',
                 success: success,
-                error: error,
+                error: function(xhr) {
+                    error.call(t, xhr.responseJSON, xhr);
+                },
                 context: t
             });
         })
