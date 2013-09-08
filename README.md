@@ -1,18 +1,22 @@
 jquery-send
 =======
 
-Send today `<form>` as JSON!
-
-`bower i send`
+Send `<form>` as JSON, today!
 
 ```js
-$('form').serializeObject()   // get form data as an object
-$('form').send(callback)      // send form as ajax
+// install
+bower i send
 
+// use
 $('form').send(function(res) {
-    $('h3.message').text(res.message);
+    this.text('Your form was sent!');  // replace form html with a massage.
 });
+
+// API
+$.fn.serializeObject()       // return form data as an object
+$.fn.send(success, failure)  // send form as ajax
 ```
+
 
 License
 ----
