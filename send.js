@@ -1,6 +1,6 @@
 /*
     jquery-send
-	https://github.com/eyy/send
+    https://github.com/eyy/send
  */
 
 (function($) {
